@@ -15,19 +15,17 @@ params:
     name: ryosan-470
   mainSections:
     - posts
-  commit: true
+  # https://github.com/halogenica/beautifulhugo/tree/master?tab=readme-ov-file#disqus-support
+  commit: "https://github.com/ryosan-470/ryosan-470.github.io/tree/"
   rss: true
   comments: true
   readingTime: false
   wordCount: false
   socialShare: true
   showRelatedPosts: false
+  # https://github.com/halogenica/beautifulhugo/tree/master?tab=readme-ov-file#disqus-support
   useHLJS: true
   delayDisqus: true
-author:
-  name: ryosan-470
-  github: ryosan-470
-  twitter: ryosan470
 
 menu:
   main:
@@ -40,3 +38,12 @@ menu:
   - name: About
     url: about
     weight: 1
+
+# theme の設定
+# https://github.com/halogenica/beautifulhugo/tree/master?tab=readme-ov-file#disqus-support
+author:
+  name: ryosan-470
+  github: ryosan-470
+  twitter: ryosan470
+# https://github.com/halogenica/beautifulhugo/tree/master?tab=readme-ov-file#disqus-support
+disqusShortname: ryosan-470
