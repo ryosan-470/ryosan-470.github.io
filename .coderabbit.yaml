@@ -1,0 +1,25 @@
+language: "ja"
+early_access: false
+reviews:
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  path_instructions:
+    - path: "**/*.md"
+      instructions: |
+        本文章は私のブログ記事です。日本語の校正をお願いします。
+        - 誤字脱字があれば指摘してください。
+        - 読みにくい文章があれば修正を提案してください。
+        - 誤解を招く表現があれば修正を提案してください。
+  auto_review:
+    enabled: true
+    ignore_title_keywords:
+      - "WIP"
+      - "DO NOT MERGE"
+    drafts: false
+    base_branches:
+      - "work/*"
+chat:
+  auto_reply: true
