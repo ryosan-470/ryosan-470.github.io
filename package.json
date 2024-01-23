@@ -14,5 +14,9 @@
   "license": "ISC",
   "dependencies": {
     "textlint": "^13.4.1"
+  },
+  "devDependencies": {
+    "textlint-rule-preset-ja-spacing": "^2.3.0",
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1"
   }
 }
