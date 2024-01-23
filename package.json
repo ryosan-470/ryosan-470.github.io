@@ -1,0 +1,22 @@
+{
+  "name": "ryosan-470.github.io",
+  "version": "1.0.0",
+  "description": "![deploy to github pages](https://github.com/ryosan-470/ryosan-470.github.io/workflows/deploy%20to%20github%20pages/badge.svg)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "textlint": "^13.4.1"
+  },
+  "devDependencies": {
+    "textlint-rule-preset-ja-spacing": "^2.3.0",
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1"
+  }
+}
