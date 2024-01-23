@@ -49,7 +49,7 @@ author:
 services:
   # https://gohugo.io/templates/internal/#disqus
   disqus:
-    shortname: ryosan-470
+    shortname: blog-ryosan470
   # https://gohugo.io/templates/internal/#google-analytics
   googleAnalytics:
     ID: G-0P8G9JQ28X
