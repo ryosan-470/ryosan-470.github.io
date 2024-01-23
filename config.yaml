@@ -45,5 +45,11 @@ author:
   name: ryosan-470
   github: ryosan-470
   twitter: ryosan470
-# https://github.com/halogenica/beautifulhugo/tree/master?tab=readme-ov-file#disqus-support
-disqusShortname: ryosan-470
+
+services:
+  # https://gohugo.io/templates/internal/#disqus
+  disqus:
+    shortname: ryosan-470
+  # https://gohugo.io/templates/internal/#google-analytics
+  googleAnalytics:
+    ID: G-0P8G9JQ28X
