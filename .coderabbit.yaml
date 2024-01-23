@@ -23,5 +23,5 @@ reviews:
     drafts: false
     base_branches:
       - "work/*"
-  chat:
-    auto_reply: true
+chat:
+  auto_reply: true
