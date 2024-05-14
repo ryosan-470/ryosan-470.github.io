@@ -27,6 +27,11 @@ params:
   useHLJS: true
   delayDisqus: true
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 menu:
   main:
   - name: Blog
