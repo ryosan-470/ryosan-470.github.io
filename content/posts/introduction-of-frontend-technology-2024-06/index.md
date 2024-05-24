@@ -1,0 +1,44 @@
+---
+title: "2024年のフロントエンド技術学び直し"
+date: 2024-05-21T16:00:00+09:00
+tags: ["技術", "フロントエンド", "学習"]
+---
+
+[株式会社 MIXI を退職しました]({{< relref "retirement-2024-06/index.md" >}}) にあるように退職したおかげで 1 ヶ月弱の有休消化期間ができました。私にとってフロントエンド技術に関しては疎くいい加減この苦手意識を根絶したくフロントエンド技術について学び直します。
+
+せっかくなので何かモダンなフレームワークを学んでみたいなということで Next.js の理解を進めてみようかと思います。
+
+# はじめに
+
+改めて基礎知識を学び直すことにしました。調べてみると [Frondend Developer Roadmap](https://roadmap.sh/frontend) というサイトを見かけました。
+
+このサイトを見つつ怪しい場所を見返してみます。
+
+- HTML
+- CSS
+- JavaScript
+  - DOM
+
+# React のチュートリアルを進める
+
+さてある程度基礎を理解しなおしたところで、Next.js のチュートリアルを進めてみようかなと思ったのですが、いきなり Next.js を理解するのではなく、React のチュートリアルが提供されておりそちらを理解してから進めた方が良いそうです。そんなわけで早速そっちを進めてみます。以下には自分で読み進めたところのうちいくつかのメモを記録しておきます。
+
+## [1. About React and Next.js](https://nextjs.org/learn/react-foundations/what-is-react-and-nextjs)
+
+- Next.js は React のフレームワーク
+  - UI の構築には React を利用している。
+- React は インタラクティブユーザーインターフェースを構築するための JavaScript のライブラリ。
+
+## [2. Rendering UI](https://nextjs.org/learn/react-foundations/rendering-ui)
+
+まずはじめにユーザーが Web サイトに訪れたとき、どのようなことが起きているかが書かれています。ざっくり、サーバーは HTML を返却しブラウザーがそれを読み込み、DOM (Document Object Model) を組み立てます。DOM は木構造になっており、親子関係を表現しています。
+
+## [3. Updating UI with JavaScript](https://nextjs.org/learn/react-foundations/updating-ui-with-javascript)
+
+JavaScript と DOM メソッドを利用して `h1` タグを追加する仕方を学びます。
+
+今まで理解していなかったのですが、ブラウザの開発者ツールで見える要素の表示は DOM で DOM は JavaScript を実行して生成されたものを示すんですね。
+
+![](02_rendering_ui_html_vs_dom.png)
+
+そしてこの JavaScript の例は _命令型プログラミング_ の例を示しているが、これは煩雑で _宣言的なアプローチ_ の方が便利では？ということになったため、React は有名な宣言型のライブラリなんですね。
