@@ -44,7 +44,7 @@ app
 
 `npm run dev` を実行して `http://localhost:3000` を開いても書いてある通りエラーになるがこれに関しては次の章で深めることができるとのことだったので早速次の章に向かいます。
 
-## [10. Server and Client Components](https://nextjs.org/learn/react-foundations/server-and-client-components)
+## [10. Server and Client Components](https://nextjs.org/learn/react-foundations/server-and-client-components) {id="server_and_client_component"}
 
 まずはサーバーとクライアントの環境についての定義が書かれていますが、これに関してはまぁ問題なく理解できます。
 コンポーネントにはサーバーとクライアントの 2 つのモジュールがあり、多くのコンポーネントはサーバーで処理するためにサーバーコンポーネントとして定義されているが、DOM 操作が必要な部分などはクライアントコンポーネントに所属しているということなのだろうか。さらにサーバーコンポーネントでレンダリングされた結果は React Server Payload (RSC) というフォーマットで表現されるデータ構造となってクライアントに返却されるということでしょうか。
