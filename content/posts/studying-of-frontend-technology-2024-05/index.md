@@ -14,7 +14,7 @@ tags: ["技術", "フロントエンド", "学習記録", "日常"]
 
 `data.ts` に `unstable_noStore` と言う関数を追加しまくります。さらにデータ取得に時間がかかる例をシミュレーションするために、`fetchRevenue()` 関数に 3 秒待ち時間を入れます。確かにブラウザで一番最初のロード時にクルクルが長くなりました。
 
-## [9. Streaming](https://nextjs.org/learn/dashboard-app/streaming)
+## [9. Streaming](https://nextjs.org/learn/dashboard-app/streaming) {id="streaming"}
 
 8 章ではデータ取得に時間がかかる場合のシミュレーションコードを追加しましたが、で？と言う感覚で終わりました。どうやらこの章で解決方法を学べるようですね。
 
