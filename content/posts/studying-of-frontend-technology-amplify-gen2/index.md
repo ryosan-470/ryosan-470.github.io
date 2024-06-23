@@ -237,3 +237,52 @@ function App() {
 指示に従いカテゴリーと商品の追加をすると最終的に次のようになりました。
 
 ![](amplify_workshop_add_category_and_product.png)
+
+さて次に [Amplify API ライブラリの使い方](https://catalog.workshops.aws/amplify-core/en-US/13-customize-client/04-add-graphql)について学んでいきすがこちらについてコードの追記というよりは説明を読み理解を深めるという章でした。なのでさくっと [Amplify SSR を使用したルーターハンドラーの追加](https://catalog.workshops.aws/amplify-core/en-US/13-customize-client/05-add-route-handler)という部分に進みます。
+
+`generateServerClientUsingCookies` という関数を使いサーバー上で Amplify API を利用できるようにし、続くコードで `Product` に関してはサーバー側で処理した結果をレンダリングするようになったということなんでしょうか。(ちょっと理解が追いついていません。)
+
+# [本番環境の準備](https://catalog.workshops.aws/amplify-core/en-US/14-prep-production)
+
+本番環境の準備を進めていきます。チュートリアルに従い、CI/CD の構築を進めていきます。この Amplify の画面だけ他の AWS コンソールより見栄えが良いですね w
+
+とりあえずさっくりと構築しました。デプロイが完了するまでは約 8 分ほどかかるので少し放置して待ちます。さらに指示に従い管理者ユーザーを作成すると改めてアプリケーションのページにログインしてサンプルデータの取り込みなどを行います。
+
+ここまでスムーズに行うことができました。
+
+さてせっかく AWS 環境を構築してみたので消す前に色々みてみます。
+
+## ビルドの設定
+
+`amplify.yml` というファイルを使えばビルド時の指定などができるようです。おそらくバックグラウンドは CodeBuild かと思うのですが、CodeBuild 自体のプロジェクトは作成されていませんでした。さらにこの YAML ファイルの設定は微妙に CodeBuild とは異なるようにも見えます。
+
+![](amplify_hosting_build_settings.png)
+
+## アクセスログなど
+
+アクセスログについては CloudWatch Logs にはなさそうな感じがします。(しっかり調べていない。)
+ただし他のコンピュートログなどは CloudWatch Logs の方にありそうですね。
+
+![](amplify_hosting_logs.png)
+
+## プレビュー
+
+CodeCommit がソースプロバイダーだと使えないようですが、GitHub であればプルリクエストごとにプレビューページ作成できるようですね。便利そう。
+
+https://docs.aws.amazon.com/amplify/latest/userguide/pr-previews.html
+
+## AWS AppSync
+
+AppSync のページにも何かできていました。はじめてみたのですが、スキーマ定義やデータソースの指定などが書かれておりよくできている印象でした。
+
+![](amplify_aws_appsync.png)
+
+さらに DynamoDB テーブルも勝手に (自動的に) 作成されているのを確認できました。
+
+# お片付け
+
+最後にワークショップで作成したリソースのお片付けをして終了です。CloudFormation で構築しているのでスタックを消すだけで全てが消えるのは便利ですね。
+
+# まとめ、感想
+
+Amplify Gen2 のワークショップをやってみました。大体この記事を書きながらやっていたのもあり、合計すれば 4 時間ほど要したと思います。細かいことまで全て理解できたわけではありませんが、Amplify の概要を掴むことはできました。さらに滅多に使わない他のサービス (AppSync や CodeCommit など) も一定数触れることができ学びになりました。また他のワークショップシリーズに触れてみて AWS やその他の概念などを学んでみようと思います。
