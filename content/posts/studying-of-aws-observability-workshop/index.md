@@ -101,4 +101,65 @@ X-Ray のトレースマップを開いてみました。
 
 ![](xray_segment_tl.png)
 
-# アプリケーションモニタリング
+# AWS Managed open-source Obserbability
+
+AWS Distro for OpenTelemetry を体験してみたかったので早速取り掛かってみます。ひとまず上から順番に進めてみようということで Prometheus と Grafana の構築を行います。
+
+## Amazon Managed Service for Prometheus
+
+手順に書いてあるように CloudFormation を用いてサクッとワークスペースを作成していきます。EKS ワークロードからメトリクスを収集するには AWS Distro for Open Telemetry (ADOT) コレクターをデプロイしていきます。
+
+メトリクスの取り込みのセクションは問題なく進みましたが、[EKS からメトリクスを取り込む](https://catalog.us-east-1.prod.workshops.aws/workshops/31676d37-bbe9-4992-9cd1-ceae13c5116c/ja-JP/aws-managed-oss/amp/ingest-metrics-managed-collector)の部分にあるコマンドは以下のように直しました。
+
+```console
+% aws eks update-cluster-config \
+    --region $AWS_REGION \
+    --name PetSite \
+    --resources-vpc-config endpointPrivateAccess=true,endpointPublicAccess=false
+```
+
+さらに `scraper` を作るセクションも以下のように直してコマンドを実行していきます。私の環境ではセキュリティグループやサブネットは次のようになっていました。
+
+![](eks_cluster_network.png)
+
+```console
+CONFIGURATION_BLOB=$(aws amp get-default-scraper-configuration --region $AWS_REGION | jq -r .configuration)
+CLUSTER_ARN=$(aws eks describe-cluster --name PetSite | jq -r .cluster.arn)
+WORKSPACE_ARN=arn:aws:aps:ap-northeast-1:645756205742:workspace/ws-37ada0b3-85d9-4dad-9881-f4585b1b121d
+
+aws amp create-scraper \
+  --source eksConfiguration="{clusterArn='${CLUSTER_ARN}', securityGroupIds=['sg-04c695bf2d025205a'],subnetIds=['subnet-01f7cf6db2d3105fe', 'subnet-051b72b515d109863']}" \
+  --scrape-configuration configurationBlob=${CONFIGURATION_BLOB} \
+  --destination ampConfiguration="{workspaceArn='${WORKSPACE_ARN}'}"
+```
+
+20 分くらいたってやっとこさ、Scraper は Active になりました。しかしこの後でなぜか `kubectl` がタイムアウトするようになってしまいました。原因究明は一旦諦めて、ECS メトリクスの取り込みも行います。こちらは指示通りあらたな ECS タスク定義を作成しそれをデプロイするようにサービスを更新することで問題なくデプロイできました。
+
+## Amazon Managed Grafana
+
+Amazon Managed Grafana を利用するためには SAML ベースの IdP または AWS SSO が必要とのことですが私が利用している AWS アカウントではすでに SSO を有効化しているのでそのまま利用します。
+
+Amazon Managed Grafana の設定で AWS SSO の `Admin` グループを Grafana の管理者として設定しました。
+
+![](grafana_user.png)
+
+続いて表示されている URL を踏めば SSO のログイン画面が出てきてログインすれば普通に Grafana の画面に遷移できました。このまま AWS データソースの設定を行います。これも Prometheus の章で作成したものが表示されています。
+
+![](grafana_aws_datasource.png)
+
+さらに続けてダッシュボードのインポートを行います。まずは EKS のダッシュボードです。
+
+![](grafana_dashboard_eks.png)
+
+問題なさそうです。ECS メトリクスに関しては手動でダッシュボードを構築していくようなので一旦スキップしました。
+
+# AWS Distro for OpenTelemetry
+
+まずは [OpenTelemetry の説明](https://catalog.us-east-1.prod.workshops.aws/workshops/31676d37-bbe9-4992-9cd1-ceae13c5116c/ja-JP/aws-managed-oss/adot/concepts)を読んでいきます。
+
+続いて各言語の実装による ADOT コレクターや OpenTelemetry ライブラリの説明が書かれていました。
+
+# まとめ
+
+このワークショップはかなり巨大で全部をしっかりやろうと思ったら数日はかかるようなボリューム感でした。今回は私が気になる部分だけをピックアップして取り組んでみましたがそれでも環境構築を含め 8 時間ほど要しました。さらに様々な AWS リソースを使うためかなりコストがかかるワークショップでもありました。もし取り組むならば 100 ドルクーポンなどをもらってやりたいものですね。
+ワークショップのありがたいところとして一時的に ECS クラスターなどを止めるというやり方が公式で存在しているところです。ゼロにはできませんがある程度抑えることができるように設計されており非常に助かりました。([リソースをクリーンアップせずにコストを節約](https://catalog.us-east-1.prod.workshops.aws/workshops/31676d37-bbe9-4992-9cd1-ceae13c5116c/ja-JP/cleanup#))
