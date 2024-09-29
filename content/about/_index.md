@@ -13,7 +13,8 @@ ryosan-470 といいます。ソフトウェアエンジニアをしています
 - 2013-04 - 2017-03 筑波大学[情報学群情報科学類](https://www.coins.tsukuba.ac.jp/)
 - 2017-04 - 2024-06 [株式会社 MIXI](https://mixi.co.jp/)
   - ソフトウェアエンジニア (バックエンド、インフラ)
-- 2024-07 - _undisclosed_
+- 2024-07 - [株式会社 TIER IV](https://tier4.jp/)
+  - ソフトウェアエンジニア (バックエンド)
 
 もう少し詳しい職歴に関しては [LinkedIn](https://www.linkedin.com/in/ryosan-470/) をご覧ください。
 
