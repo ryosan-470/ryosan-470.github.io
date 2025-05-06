@@ -1,11 +1,13 @@
 ---
 title: "私の住まい探し・購入記"
-date: 2025-03-12T09:00:00Z
+date: 2025-05-06T22:00:00Z
 draft: false
 tags: ["日記"]
 ---
 
 # はじめに
+
+[![家探しのイラスト by いらすとや](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgL4j31qCzAe5TugXnyt4LQIA6UFR67SRzxMuAyw8DTGCNi-ui4NPsFMxVgx9FHPkca3nlctQLTZ1t3KIZIZudGDEdXQYtgepD3Al92-frjIPeUB1M-IX-93X5U2DjtE8JP91rajo5UjYUh/s800/house_ie_sagashi.png)](https://www.irasutoya.com/2016/02/blog-post_346.html)
 
 2025年2月、私はついに人生で最大の買い物であるマイホームを購入しました。
 （正確には、新築のため引き渡しと決済はまだですが、無事に売買契約を締結しました。）
@@ -26,6 +28,8 @@ tags: ["日記"]
 * **予算**：私が組める住宅ローンの上限額まで。
 
 ## 情報収集
+
+[![情報収集のイラスト by いらすとや](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaG-Dft9EvaMucq8nwD6HGoUEuOTpcdx0DLcP4wgCzW7tgc0LIAcZd9tucsTIscTFrVUpK9JULHzEeR_DtNyDdAoTAFlKg1qq0elh7ymZX2IJaSEaGp0YArAhJwuqnAz4cuxXOU2_oi5VA/s800/computer_search_kensaku.png)](https://www.irasutoya.com/2016/07/blog-post_36.html)
 
 まずは情報収集から始めました。当初はSUUMOなどのアプリで物件情報や相場を眺める程度で、具体的な行動には移していませんでした。
 
@@ -54,6 +58,8 @@ FPは私たちの家計状況や将来設計を踏まえ、様々なシミュレ
 * 将来の子どもの人数を想定し、生活費や教育費を加味した場合の住宅ローン上限額の試算。
 
 ## 方向性を決めた
+
+[![将来設計をする人のイラスト (男性) by いらすとや](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZDGNT6LdHkJv45fM7HjPsUoB0T2wYiAJ1BD4mB0osdUPbdSi0JVAss3AspUgQKFU3meREd2OuKR2CVX-NK-GTTJZui5rBKoU_bzBX-cqjBNTaCz_o3LEtKCW8ORiE-yOVPJDjAHC2LzXh/s800/syourai_sekkei_man.png)](https://www.irasutoya.com/2019/01/blog-post_11.html)
 
 FPとの相談を経て、予算を含めた物件探しの方向性について夫婦で話し合い、具体的に決めることができました。
 私たちの希望条件は以下の通りです。
@@ -117,6 +123,8 @@ FPとの相談を経て、予算を含めた物件探しの方向性について
 当日、私たちは一番手で内見することができ、これまでの物件の中で最も好印象でした。室内もきれいで、眺望も良く、雰囲気も申し分ありません。そこで、内見後すぐに購入の意思を伝え、買い付け申し込みを入れました。しかし帰宅後、仲介業者から「他にも買い付け申し込みが入っている」と連絡がありました。そして、価格を上乗せして購入する「買上がり」の提案を受けました。私たちはこの物件を大変気に入っていたため買上がりを選択しましたが、残念ながら他の買い手に購入されてしまいました。
 
 仲介業者からは、私たちの契約希望日が2週間後だったことが原因の一つではないかと言われました。確かに、内見の翌週の土日はどうしても外せない予定があり、契約希望日を2週間後に設定せざるを得ませんでした。しかし、それ以外にも理由があるように感じています。おそらく、もう一方の買い手は売主と同じ仲介業者だったため、いわゆる「両手仲介」となり、仲介業者の利益が最大化される取引だったのではないでしょうか。これが敗因だったのかもしれないと考えています。
+
+[![悔しい人のイラスト by いらすとや](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzxQjD1GLGo16hp2YGk_2eKSbv5WdLfhy6O0c8SN7UrWMxB_AGKMfYDml7ESXhQWvy_RLGNnIHbrrjcnB0Fzt177ND7zvEnCbgsKa7gDsmDLwGHSldHP1jmV6n7XJL4e9N7R4ZEolfQVo/s800/pose_kuyashii_man.png)](https://www.irasutoya.com/2018/03/blog-post_421.html)
 
 ### 中古マンション内見のまとめと学び
 
