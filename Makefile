@@ -1,4 +1,4 @@
-HUGO_VERSION := 0.135.0
+HUGO_VERSION := 0.145.0
 HUGO := ./.bin/hugo
 
 # OSとアーキテクチャの検出
