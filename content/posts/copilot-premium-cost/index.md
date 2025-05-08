@@ -4,6 +4,10 @@ date: 2025-05-07T19:00:00+09:00
 tags: ["技術", "GitHub", "Copilot", "LLM"]
 ---
 
+# 更新: 2025/05/08
+
+[Enforcement of Copilot premium request limits moved to June 4, 2025](https://github.blog/changelog/2025-05-07-enforcement-of-copilot-premium-request-limits-moved-to-june-4-2025/) が公開されていました。これによると元々明日の 2025/05/08 に変更される予定だった Copilot のプレミアムリクエストの制限が **2025/06/04 に変更** されるとのことです。
+
 # 概要
 GitHub Copilot は **2025/05/08** より**リクエスト数に応じた**課金モデルが変更になりました。本記事ではこの変更に伴い Copilot を使っていくのならどのプランを選ぶのが良さそうか調査してみたのでその内容をまとめます。
 
@@ -11,7 +15,7 @@ GitHub Copilot は **2025/05/08** より**リクエスト数に応じた**課金
 
 # GitHub Copilot のプレミアムリクエストについて
 
-[About premium requests - GitHub Docs](https://docs.github.com/en/copilot/managing-copilot/monitoring-usage-and-entitlements/about-premium-requests) に書かれています。主な変更点をざっくりまとめると以下のようになります。まず通常の LLM を用いたコード補完に関しては Free プランは月2000回まで、**有料プラン (Pro または Pro+)**に加入していれば無制限に使えます。
+[About premium requests - GitHub Docs](https://docs.github.com/en/copilot/managing-copilot/monitoring-usage-and-entitlements/about-premium-requests) に書かれています。主な変更点をざっくりまとめると以下のようになります。まず通常の LLM を用いたコード補完に関しては Free プランは月2000回まで、**有料プラン (Pro または Pro+)** に加入していれば無制限に使えます。
 
 ただし下記の機能が**2025/05/08**よりプレミアム機能ということになり有料になります。
 - チャット
