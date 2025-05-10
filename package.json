@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "textlint-rule-preset-ja-spacing": "^2.3.0",
-    "textlint-rule-preset-ja-technical-writing": "^10.0.1"
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
+    "wrangler": "^4.14.1"
   }
 }
