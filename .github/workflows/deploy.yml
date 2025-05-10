@@ -1,9 +1,7 @@
 name: deploy to github pages
 
-on:
-  push:
-    branches:
-      - master
+on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -36,3 +34,4 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         id: deployment
+        if: ${{ github.ref_name == 'master' }}
